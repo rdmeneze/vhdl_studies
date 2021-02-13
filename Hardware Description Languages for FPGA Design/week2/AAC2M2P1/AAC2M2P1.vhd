@@ -15,14 +15,14 @@ entity AAC2M2P1 is port (
 end AAC2M2P1;
 
 architecture rtl of AAC2M2P1 is
-    variable counter : integer range 0 to 15;
-    variable counter_enable : std_logic;
 begin
     proc_name: process(CP, SR)
+        variable counter : std_logic_vector(3 downto 0) := "0000";
+        variable counter_enable : std_logic;
     begin
         if rising_edge( CP ) then
             if falling_edge( SR ) then
-                counter := 0;
+                counter := "0000";
             end if;
 
             if falling_edge( PE ) then 
@@ -32,22 +32,26 @@ begin
             counter_enable := CET and CEP;
 
             if ( falling_edge( CP ) ) then
-                counter := 0;
-            else if ( falling_edge( PE ) ) then 
-                counter := P; 
-            else if ( counter_enable = 1 ) then
-                counter := counter + 1;
+                counter := "0000";
             end if;
-
-            if counter = xF then
-                TC <= 1;
-            else
-                TC <= 0;
-            end if;
-
-            Q <= counter;
             
+            if ( falling_edge( PE ) ) then 
+                counter := P;
+            end if; 
+            
+            -- if ( counter_enable = '1' ) then
+            --     counter := counter + "1";
+            -- end if;
+
+            if counter = x"F" then
+                TC <= '1';
+            else
+                TC <= '0';
+            end if;
         end if;
+
+        Q <= counter;
+
     end process proc_name;
     
     
