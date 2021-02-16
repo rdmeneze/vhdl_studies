@@ -13,46 +13,33 @@ entity AAC2M2P1 is port (
     TC:     out std_logic   -- Terminal Count
 );            		
 end AAC2M2P1;
-
-architecture rtl of AAC2M2P1 is
+ 
+architecture s74lLS63 of AAC2M2P1 is
 begin
     proc_name: process(CP, SR)
-        variable counter : std_logic_vector(3 downto 0) := "0000";
-        variable counter_enable : std_logic;
+        variable counter : integer range 0 to 15;
     begin
         if rising_edge( CP ) then
+
+            if ( (CET and CEP) = '1' ) then
+                counter := counter + 1;
+	    end if;
+
             if falling_edge( SR ) then
-                counter := "0000";
+                counter := 0;
+            elsif falling_edge( PE ) then 
+                counter := to_integer( unsigned( P ));
             end if;
 
-            if falling_edge( PE ) then 
-                counter := P;
-            end if;
-
-            counter_enable := CET and CEP;
-
-            if ( falling_edge( CP ) ) then
-                counter := "0000";
-            end if;
-            
-            if ( falling_edge( PE ) ) then 
-                counter := P;
-            end if; 
-            
-            -- if ( counter_enable = '1' ) then
-            --     counter := counter + "1";
-            -- end if;
-
-            if counter = x"F" then
+            if counter = 15 then
                 TC <= '1';
             else
                 TC <= '0';
             end if;
         end if;
 
-        Q <= counter;
+	Q <= std_logic_vector( to_unsigned( counter, Q'length ) );
 
-    end process proc_name;
+    end process proc_name;   
     
-    
-end architecture rtl;
+end architecture s74lLS63;
