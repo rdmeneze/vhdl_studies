@@ -17,12 +17,22 @@ end AAC2M2P1;
 architecture s74lLS63 of AAC2M2P1 is
 begin
     proc_name: process(CP, SR)
-        variable counter : integer range 0 to 15;
+        variable counter : integer range 0 to 16;
     begin
         if rising_edge( CP ) then
 
+            if counter = 15 then
+                TC <= '1';
+            else
+                TC <= '0';
+            end if;
+
             if ( (CET and CEP) = '1' ) then
-                counter := counter + 1;
+		if (counter < 16 ) then
+                  counter := counter + 1;
+	        else
+		  counter := 0;
+                end if;
 	    end if;
 
             if falling_edge( SR ) then
@@ -31,11 +41,6 @@ begin
                 counter := to_integer( unsigned( P ));
             end if;
 
-            if counter = 15 then
-                TC <= '1';
-            else
-                TC <= '0';
-            end if;
         end if;
 
 	Q <= std_logic_vector( to_unsigned( counter, Q'length ) );
