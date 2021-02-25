@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/sources/vhdl_studies/Hardware Description Languages for FPGA Design/week3/AAC2M3P3
+vAAC2M3P4_tb
+!s110 1614232779
+!i10b 1
+!s100 1Zg9zDkg53aPV:7X8MK:P3
+IW=1CBP[e[DP3l:Jl0`S8=0
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dD:/sources/vhdl_studies/Hardware Description Languages for FPGA Design/week3/AAC2M3P4
+w1573404078
+8D:/sources/vhdl_studies/Hardware Description Languages for FPGA Design/week3/AAC2M3P4/AAC2M3P4_tb.vp
+FD:/sources/vhdl_studies/Hardware Description Languages for FPGA Design/week3/AAC2M3P4/AAC2M3P4_tb.vp
+L0 61
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1614232778.000000
+!s107 D:/sources/vhdl_studies/Hardware Description Languages for FPGA Design/week3/AAC2M3P4/AAC2M3P4_tb.vp|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/sources/vhdl_studies/Hardware Description Languages for FPGA Design/week3/AAC2M3P4/AAC2M3P4_tb.vp|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+n@a@a@c2@m3@p4_tb
+vMajority
+!s110 1614232812
+!i10b 1
+!s100 <W]gj0m:Si9V2P<dMnbi83
+I5@MT3MM2T0YiijINUDEOc2
+R0
+R1
+w1614232805
+8D:\sources\vhdl_studies\Hardware Description Languages for FPGA Design\week3\AAC2M3P4\AAC2M3P4.v
+FD:\sources\vhdl_studies\Hardware Description Languages for FPGA Design\week3\AAC2M3P4\AAC2M3P4.v
+L0 37
+R2
+r1
+!s85 0
+31
+!s108 1614232812.000000
+!s107 D:\sources\vhdl_studies\Hardware Description Languages for FPGA Design\week3\AAC2M3P4\AAC2M3P4.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:\sources\vhdl_studies\Hardware Description Languages for FPGA Design\week3\AAC2M3P4\AAC2M3P4.v|
+!i113 1
+R3
+R4
+n@majority
