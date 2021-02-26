@@ -1,0 +1,8 @@
+{D:/sources/vhdl_studies/Hardware Description Languages for FPGA Design/week3/AAC2M3H1/AAC2M3H1_tb.vp} {1 {vlog -work work -stats=none {D:/sources/vhdl_studies/Hardware Description Languages for FPGA Design/week3/AAC2M3H1/AAC2M3H1_tb.vp}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module AAC2M3H1_tb
+
+Top level modules:
+	AAC2M3H1_tb
+
+} {} {}}

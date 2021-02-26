@@ -49,7 +49,7 @@ begin                                        // line 9
   assign creg = c;                           // line 12
 always @*                                    // line 13 
 begin                                      // line 14
-  if (creg == 6'hF)   //creg is all 1s     // line 15 
+  if (creg == 6'h3F)   //creg is all 1s     // line 15 
     bw  <= aw;                             // line 16  
   else                                     // line 17
     bw <= 4'b0101;                           // line 18   
