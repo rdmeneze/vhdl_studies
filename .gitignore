@@ -1,0 +1,7 @@
+*.mti
+transcript
+*.qdb
+*.qpg
+*.qtl
+*_info
+*_vmake
