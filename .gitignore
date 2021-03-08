@@ -5,3 +5,5 @@ transcript
 *.qtl
 *_info
 *_vmake
+*.wlf
+*out
